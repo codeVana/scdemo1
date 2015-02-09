@@ -1,0 +1,32 @@
+<head>
+  <title>StartupCamp Forum</title>
+</head>
+
+<body>
+  {{> form}}
+  {{> posts}}
+</body>
+
+<template name="posts">
+  <h1>Posts</h1>
+  <ul>
+    {{#each posts}}
+      <li>
+        <h3>{{title}} </h3>
+        <p>{{body}}</p>
+      </li>
+    {{/each}}
+  </ul>
+</template>
+
+<template name="form">
+  <form>
+    <label>Post Title:
+      <input type="text" id="title" />
+    </label>
+    <label>Post Body:
+      <textarea id="body"></textarea>
+    </label>
+    <input type="Submit" id="submit"/>
+  </form>
+</template>
